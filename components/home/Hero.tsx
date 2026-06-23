@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Hero(){
     return(
@@ -11,9 +12,10 @@ export default function Hero(){
                     <p className="leading-relaxed max-w-md mb-8 text-lg md:text-xl text-gray-500">
                      Sealed · Singles · Accessories · Events
                     </p>
-                    <div className="flex gap-4 ">
-                        <button className="bg-foreground rounded-lg px-6 py-3 text-white font-bold cursor-pointer">Shop All</button>
-                        <button className="bg-primary border border-gray-400 rounded-lg px-6 py-3 text-black cursor-pointer">Browse Game</button>
+                    <div className="flex gap-4 items-center">
+                        <Link href="/collections/all">
+                            <button className="bg-foreground rounded-lg px-6 py-3 text-white font-bold cursor-pointer">Shop All</button>
+                        </Link>
                     </div>
                 </div>
                
