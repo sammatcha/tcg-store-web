@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState } from "react"
-import { cartCreate, cartLinesAdd, getCart } from "@/lib/shopify"
+import { cartCreate, cartLinesAdd, cartLinesRemove, getCart } from "@/lib/shopify"
 
 type Money = {
   amount: string
@@ -30,6 +30,7 @@ type CartContextType = {
   itemCount: number
   isLoading: boolean
   addToCart: (variantId: string, quantity?: number) => Promise<void>
+  removeFromCart: (lineId: string) => Promise<void>
 }
 
 const CartContext = createContext<CartContextType | null>(null)
@@ -107,6 +108,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
+  async function removeFromCart(lineId: string) {
+    if (!cart?.id) return
+    setIsLoading(true)
+    try {
+        const updatedCart = await cartLinesRemove(cart.id,lineId )
+        if (!updatedCart)return
+        setCart(parseCart(updatedCart))
+    }   finally {
+        setIsLoading(false)
+    }
+}
+
   return (
     <CartContext.Provider
       value={{
@@ -114,12 +127,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         itemCount: getItemCount(cart),
         isLoading,
         addToCart,
+        removeFromCart
       }}
     >
       {children}
     </CartContext.Provider>
   )
 }
+
+
 
 export function useCart() {
   const context = useContext(CartContext)
@@ -128,3 +144,5 @@ export function useCart() {
   }
   return context
 }
+
+
