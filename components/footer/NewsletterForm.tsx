@@ -14,7 +14,7 @@ export default function NewsletterForm(){
   
     return submit ? (
         <div>
-            <p>You're on the list!</p>
+            <p>You&apos;re on the list!</p>
         </div>
        ):(
          <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-3 self-start w-48">
