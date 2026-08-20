@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-slate-700 text-white py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-8">
+        <div className="flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-8">
           <div>
             <p className="font-bold uppercase text-sm tracking-wide mb-3">
               Sign Up For Updates
@@ -60,7 +60,7 @@ export default function Footer() {
         <p className="text-sm text-white/70 mt-8">
           © {new Date().getFullYear()}
         </p>
-        <h1 className="text-2xl tracking-wide overflow-hidden md:text-5xl lg:text-7xl md:tracking-wider">
+        <h1 className="text-4xl tracking-wide overflow-hidden md:text-5xl lg:text-8xl md:tracking-wider">
           TCG Storefront
         </h1>
       </div>
