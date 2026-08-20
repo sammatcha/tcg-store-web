@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Hero/>
-      <Games/>
-      <NewArrivals/>
+    <div className="w-full">
+      <Hero />
+      <Games />
+      <NewArrivals />
     </div>
   );
 }
