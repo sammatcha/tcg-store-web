@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Games(){
     return(
-        <section className=" w-full pt-6 pb-10 md:pt-10 md:pb-16" id="games">
+        <section className="w-full pt-10 pb-24 md:pt-24 md:pb-30 lg:pb-38" id="games">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6  ">
                     {/* One Piece */}
@@ -37,8 +37,7 @@ export default function Games(){
                                 alt="pokemon logo"
                                 fill
                                 loading="eager"
-                                className="object-contain object-left md:scale-125 origin-left md:ml-20"
-                            
+                                className="object-contain object-left md:scale-125 origin-left md:ml-20 "
                             />
                         </div>
 

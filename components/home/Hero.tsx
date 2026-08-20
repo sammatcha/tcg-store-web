@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Hero(){
     return(
         <section className="w-full  ">
-            <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className="bg-gray-100 py-16 md:py-24 lg:py-28 w-full rounded-xl px-5 md:px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="bg-gray-100 py-8 md:py-24 lg:py-28 w-full rounded-xl px-5 md:px-6">
                      <h1 className="text-3xl md:text-5xl font-bold leading-tight max-w-xl mb-4 text-gray-900">
                     Your Stop to Shop
                     </h1>

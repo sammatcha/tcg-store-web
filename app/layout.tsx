@@ -35,7 +35,7 @@ export default function RootLayout({
         <Providers>
           <AnnouncementBar/>
           <Navbar/>
-          <main className="flex-1 w-full" >
+          <main className="flex-1 flex flex-col w-full">
             {children}
           </main>
           <Footer/>
