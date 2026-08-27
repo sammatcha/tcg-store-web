@@ -46,7 +46,7 @@ export async function getCollectionByHandle(handle: string) {
         }
     }`
     const data = await shopifyFetch({ query })
-    return data.data.collection
+    return data.data?.collection ?? null
 }
 
 

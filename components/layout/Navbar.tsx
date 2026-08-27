@@ -28,15 +28,15 @@ export default function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <nav className="w-full cursor-pointer ">
+        <nav className="w-full bg-background">
             <div className="md:flex hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-20 items-center justify-between ">
                 <div className="flex ">
-                    <Link href="/" className="text-2xl font-bold text-gray-800 ">TCG Storefront</Link>
+                    <Link href="/" className="text-xl font-semibold tracking-tight text-neutral-900 ">TCG Storefront</Link>
                 </div>
-                <div className="flex gap-8 items-center">
+                <div className="flex gap-2 items-center">
                     {navItems.map((item) => (
                     <Link key={item.id} href={item.href}
-                    className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-xl font-medium"
+                    className="text-neutral-700 hover:text-neutral-900 px-3 py-2 rounded-md text-base font-medium"
                     >
                         {item.name}
                     </Link>
@@ -52,9 +52,9 @@ export default function Navbar(){
             <div className="md:hidden w-full ">
                 <div className='grid grid-cols-[auto_1fr_auto] max-w-7xl mx-auto items-center h-16 px-4 sm:px-6 lg:px-8'>
                     <button onClick={() => setIsOpen(!isOpen)}>
-                    {!isOpen && <Menu className="text-primary bg-white"/>}
+                    {!isOpen && <Menu className="text-primary "/>}
                     </button>
-                    <Link href="/" className=" text-lg items-center justify-center whitespace-nowrap font-extralight text-gray-700 text-center ">TCG Storefront</Link>
+                    <Link href="/" className=" text-lg items-center justify-center whitespace-nowrap font-semibold text-neutral-900 text-center">TCG Storefront</Link>
                     <div className="flex justify-end items-center">
                         <CartIcon />
                     </div>
