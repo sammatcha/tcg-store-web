@@ -9,7 +9,7 @@ export default function ProductCard({product}: {product: any}){
            <div className="relative w-full h-48 md:h-64 bg-white border-gray-200 border rounded-lg overflow-hidden mb-3 transition-shadow duration-300 group-hover:shadow-md">
                 <Image
                     src={product.images.edges[0]?.node.url}
-                    alt="one piece product"
+                    alt={product.title}
                     fill
                     className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
                 />
